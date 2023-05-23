@@ -1,0 +1,77 @@
+* 
+{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+}
+
+body
+{
+      font-family: arail;
+      background: #ecf0f1;
+      scroll-behavior: smooth;
+}
+
+.accordion
+{
+      width: 70%;
+      margin: 50px 50px;
+      /* text-align: center; */
+      background: #fff;
+}
+
+.accordion-tab > label
+{
+      color: white;
+      background: #2980b9;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 24px;
+      position: relative;
+      display: block;
+      padding:12px 20px;
+      cursor: pointer;
+}
+
+.accordion-tab > .accordion-content
+{
+      max-height: 0;
+      transition: all .4s;
+      overflow: hidden;
+}
+
+.accordion-tab > .accordion-toggle:checked ~ .accordion-content
+{
+      max-height: 100vh;
+}
+
+.accordion .accordion-toggle
+{
+      display: none;
+}
+
+.accordion-tab > label
+{
+      border-top: 1px solid #ddd;
+}
+
+.accordion-tab > .accordion-content p
+{
+      padding:15px 20px;
+      line-height: 20px;
+}
+.accordion-tab > label::after
+{
+      content: "\f078";
+      font-family: fontawesome;
+      position: absolute;
+      top: 13px;
+      right: 20px;
+      transform: rotate(0deg);
+      transition: transform .3s;
+}
+.accordion-tab > .accordion-toggle:checked ~ label::after
+{
+      transform: rotate(95deg);
+}
